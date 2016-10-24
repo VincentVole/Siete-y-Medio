@@ -64,6 +64,8 @@ public:
 	Hand();
 
 	// You decide what functions you'll need...
+	void draw();
+	void discardHand();
 
 private:
 	// You decide what fields you'll need...
@@ -79,6 +81,8 @@ public:
 	Player(bool dealer);
 
 	// You decide what functions you'll need...
+	void draw();
+	void discardHand();
 
 private:
 	int money;
