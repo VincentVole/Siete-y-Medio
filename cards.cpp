@@ -193,6 +193,14 @@ Hand::Hand() {
 	value = 0;
 }
 
+void Hand::draw() {
+	hand.push_back(Card());
+}
+
+void Hand::discardHand() {
+	hand.clear();
+}
+
 
 /* *************************************************
 Player class
@@ -207,4 +215,12 @@ Player::Player(bool dealer) {
 	}
 	hand = Hand();
 
+}
+
+void Player::draw() {
+	hand.draw();
+}
+
+void Player::discardHand() {
+	hand.discardHand();
 }
