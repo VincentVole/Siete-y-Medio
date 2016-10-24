@@ -76,13 +76,14 @@ class Player {
 public:
 	// Constructor. 
 	//    Assigns initial amount of money
-	Player(int m);
+	Player(bool dealer);
 
 	// You decide what functions you'll need...
 
 private:
 	int money;
 	Hand hand;
+	bool dealer;
 	// You decide what extra fields (if any) you'll need...
 };
 
