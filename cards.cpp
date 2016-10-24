@@ -198,8 +198,13 @@ Hand::Hand() {
 Player class
 ************************************************* */
 // Implemente the member functions of the Player class here.
-Player::Player(int m) {
-	money = 100;
+Player::Player(bool dealer) {
+	if (dealer) {
+		money = 900;
+	}
+	else {
+		money = 100;
+	}
 	hand = Hand();
 
 }
