@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <iostream>
 
+using std::cout;
+
 /*
 You might or might not need these two extra libraries
 #include <iomanip>
@@ -183,6 +185,11 @@ bool Card::operator < (Card card2) const {
 	return rank < card2.rank;
 }
 
+//outputs card rank and suit to console
+void Card::print_card() {
+	cout << get_spanish_rank() << " de " << get_spanish_suit() << endl;
+}
+
 
 
 /* *************************************************
@@ -201,6 +208,11 @@ void Hand::discardHand() {
 	hand.clear();
 }
 
+void Hand::print_hand() {
+	for (int i = 0; i < hand.size(); i++) {
+		hand[i].print_card();
+	}
+}
 
 /* *************************************************
 Player class
@@ -223,4 +235,8 @@ void Player::draw() {
 
 void Player::discardHand() {
 	hand.discardHand();
+}
+
+void Hand::print_hand() {
+	hand.print_hand();
 }

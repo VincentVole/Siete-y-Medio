@@ -52,6 +52,9 @@ public:
 	// Useful if you want to sort the cards.
 	bool operator < (Card card2) const;
 
+	//outputs card rank and suit to console
+	void print_card();
+
 private:
 	suit_t suit;
 	rank_t rank;
@@ -66,6 +69,7 @@ public:
 	// You decide what functions you'll need...
 	void draw();
 	void discardHand();
+	void print_hand();
 
 private:
 	// You decide what fields you'll need...
@@ -83,6 +87,7 @@ public:
 	// You decide what functions you'll need...
 	void draw();
 	void discardHand();
+	void print_hand();
 
 private:
 	int money;
